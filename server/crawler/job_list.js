@@ -64,15 +64,17 @@ async function fetchJobList(page, curPage) {
 
     const page = await browser.newPage()
 
-    for (let i = 1; i <= 1; i++) {
+    for (let i = 1; i <= 3; i++) {
         let tmp = await fetchJobList(page, i)
         console.log(tmp)
         result = [...result, ...tmp]
     }
 
 
+   
+    process.send({result})
     await sleep(5000)
-
     browser.close()
+    process.exit(0)
 
 })()

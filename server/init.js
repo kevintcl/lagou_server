@@ -15,6 +15,9 @@ async function start() {
 
 
     // require('./tasks/company_list_task')
+    // require('./tasks/job_list_task')
+
+    // require('./tasks/company_detail_task')
 }
 
 app.use(router.routes())
